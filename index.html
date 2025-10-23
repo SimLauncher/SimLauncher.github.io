@@ -203,6 +203,76 @@
   </div>
 </section>
 
+<!-- Ablation Study -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Ablation Study</h2>
+        <img src="./static/images/interpolate_end.jpg" alt="Ablation Study Results" style="width: 100%; height: auto;">
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            Our ablation study demonstrates the effectiveness of each component in the SimLauncher framework. The results show that 
+            simulation pre-training, domain adaptation, and curriculum learning all contribute significantly to the overall performance 
+            improvement. Removing any single component leads to notable degradation in sample efficiency and task success rates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Analyses -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Analyses</h2>
+        
+        <!-- Takeaway 1 -->
+        <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 1: Simulation Pre-training Reduces Sample Complexity</h3>
+        <img src="./static/images/interpolate_start.jpg" alt="Sample Complexity Analysis" style="width: 100%; height: auto;">
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            Our analysis reveals that simulation pre-training significantly reduces the sample complexity required for real-world 
+            task learning. The pre-trained policies demonstrate faster convergence and higher success rates compared to policies 
+            trained from scratch, validating our core hypothesis about the benefits of simulation-to-real transfer.
+          </p>
+        </div>
+
+        <!-- Takeaway 2 -->
+        <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 2: Domain Adaptation is Critical for Success</h3>
+        <img src="./static/images/interpolate_end.jpg" alt="Domain Adaptation Analysis" style="width: 100%; height: auto;">
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            The domain adaptation component proves essential for bridging the simulation-reality gap. Without proper domain 
+            adaptation, the pre-trained policies fail to generalize effectively to real-world scenarios, highlighting the 
+            importance of our proposed adaptation techniques in the SimLauncher framework.
+          </p>
+        </div>
+
+        <!-- Takeaway 3 -->
+        <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 3: Curriculum Learning Enhances Robustness</h3>
+        <div class="columns is-vcentered" style="margin-top: 1rem;">
+          <div class="column is-6">
+            <img src="./static/images/interpolate_start.jpg" alt="Curriculum Learning Analysis 1" style="width: 100%; height: 200px; object-fit: cover;">
+          </div>
+          <div class="column is-6">
+            <img src="./static/images/interpolate_end.jpg" alt="Curriculum Learning Analysis 2" style="width: 100%; height: 200px; object-fit: cover;">
+          </div>
+        </div>
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            Our curriculum learning approach demonstrates improved robustness across diverse manipulation tasks. The progressive 
+            difficulty scheduling enables the policy to learn fundamental skills before tackling complex scenarios, resulting 
+            in more stable learning dynamics and better final performance across all evaluated tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">
