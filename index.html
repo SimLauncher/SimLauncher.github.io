@@ -10,7 +10,7 @@
         rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/rocket_icon.png">
 </head>
 <body>
 
@@ -45,7 +45,7 @@
             <span class="author-block">
               <a href="#">Long Yang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://simlauncher.github.io/#">Yuanpei Chen</a><sup>1</sup>,</span>
+              <a href="https://cypypccpy.github.io/">Yuanpei Chen</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://zsdonghao.github.io/">Hao Dong</a><sup>1</sup>
             </span>
@@ -68,7 +68,7 @@
                 <a href="https://arxiv.org/abs/2507.04452"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <img src="./static/images/arxiv_icon.png" alt="arXiv" style="width: 16px; height: 16px;">
                   </span>
                   <span>arXiv</span>
                 </a>
@@ -100,18 +100,37 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
+            Autonomous learning of dexterous, long-horizon
+            robotic skills has been a longstanding pursuit of embodied AI.
+            Recent advances in robotic reinforcement learning (RL) have
+            demonstrated remarkable performance and robustness in realworld visuomotor control tasks. However, applying RL in the
+            real world faces challenges such as low sample efficiency, slow
+            exploration, and significant reliance on human intervention.
+            In contrast, simulators offer a safe and efficient environment
+            for extensive exploration and data collection, while the visual
+            sim-to-real gap, often a limiting factor, can be mitigated
+            using real-to-sim techniques. 
+          </p>
+          <p>
+            Building on these, we propose
+            SimLauncher, a novel framework that combines the strengths of
+            real-world RL and real-to-sim-to-real approaches to overcome
+            these challenges.
+            Specifically, we first pre-train a visuomotor
+            policy in the digital twin simulation environment, which then
+            benefits real-world RL in two ways: (1) bootstrapping target
+            values using extensive simulated demonstrations and real-world
+            demonstrations derived from pre-trained policy rollouts, and
+            (2) Incorporating action proposals from the pre-trained policy
+            for better exploration.
+          </p>
+          <p>
+            We conduct comprehensive experiments
+            across multi-stage, contact-rich, and dexterous hand manipulation tasks. Compared to prior real-world RL approaches, SimLauncher significantly improves sample efficiency and achieves
+            near-perfect success rates. We hope this work serves as a proof
+            of concept and inspires further research on leveraging largescale simulation pre-training to benefit real-world robotic RL.
             SimLauncher presents a novel approach to sample-efficient robotic reinforcement learning through simulation pre-training. 
             Our method leverages large-scale simulation environments to pre-train robotic policies before transferring them to real-world scenarios.
-          </p>
-          <p>
-            By utilizing advanced domain adaptation techniques and curriculum learning strategies, SimLauncher achieves significant improvements 
-            in sample efficiency compared to traditional reinforcement learning approaches. The framework demonstrates robust performance across 
-            various manipulation tasks including pick-and-place, insertion, and dexterous grasping.
-          </p>
-          <p>
-            Our experimental results show that SimLauncher reduces the required real-world training samples by up to 80% while maintaining 
-            high task success rates. This breakthrough enables more practical deployment of robotic systems in real-world applications where 
-            data collection is expensive and time-consuming.
           </p>
         </div>
       </div>
@@ -127,28 +146,28 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Uncut Training Process</h2>
         <p class="subtitle is-5">Demonstrating the complete training pipeline across different manipulation tasks</p>
-        
+
         <div class="columns is-vcentered">
-          <div class="column">
+      <div class="column">
             <h3 class="title is-4">Pick and Place</h3>
             <video controls muted loop playsinline style="width: 100%; height: auto;">
               <source src="./static/videos/teaser.mp4" type="video/mp4">
-            </video>
-          </div>
+          </video>
+        </div>
           <div class="column">
             <h3 class="title is-4">Pick and Insert</h3>
             <video controls muted loop playsinline style="width: 100%; height: auto;">
               <source src="./static/videos/teaser.mp4" type="video/mp4">
             </video>
-          </div>
-          <div class="column">
+      </div>
+      <div class="column">
             <h3 class="title is-4">Dex Grasp</h3>
             <video controls muted loop playsinline style="width: 100%; height: auto;">
               <source src="./static/videos/teaser.mp4" type="video/mp4">
             </video>
           </div>
-        </div>
-        
+          </div>
+
         <div class="content has-text-justified" style="margin-top: 2rem;">
           <p>
             The training process showcases SimLauncher's ability to learn complex manipulation skills through simulation pre-training. 
@@ -161,47 +180,6 @@
   </div>
 </section>
 
-
-<!-- Evaluation -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Evaluation</h2>
-        <p class="subtitle is-5">Real-world performance validation across manipulation tasks</p>
-        
-        <div class="columns is-vcentered">
-          <div class="column">
-            <h3 class="title is-4">Pick and Place</h3>
-            <video controls muted loop playsinline style="width: 100%; height: auto;">
-              <source src="./static/videos/teaser.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column">
-            <h3 class="title is-4">Pick and Insert</h3>
-            <video controls muted loop playsinline style="width: 100%; height: auto;">
-              <source src="./static/videos/teaser.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column">
-            <h3 class="title is-4">Dex Grasp</h3>
-            <video controls muted loop playsinline style="width: 100%; height: auto;">
-              <source src="./static/videos/teaser.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        
-        <div class="content has-text-justified" style="margin-top: 2rem;">
-          <p>
-            Our evaluation demonstrates SimLauncher's superior performance in real-world robotic manipulation tasks. The videos show 
-            successful task completion with high precision and reliability, validating the effectiveness of our simulation pre-training 
-            approach. Comparative studies reveal significant improvements in success rates and sample efficiency compared to baseline methods.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Ablation Study -->
 <section class="section">
