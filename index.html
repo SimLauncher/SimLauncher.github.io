@@ -173,6 +173,20 @@
         </div> -->
         <!-- add a image here -->
         <img src="./static/images/curves_main_v2.png" alt="SimLauncher Training Process" style="width: 100%; height: auto;">
+        <div class="content has-text-justified" style="margin-top: 2rem;">
+          <p>
+            We show the complete training process and curves of SimLauncher on 3 tasks. The curves are averaged over 3 runs.
+            <br>
+            SimLauncher achieves significant real-world RL speedups compared to RL methods with only human demonstrations:
+
+          </p>
+
+          <ul>
+            <li><strong>Pick and Place:</strong> 62 min to 38 min (63% faster)</li>
+            <li><strong>Pick and Insert:</strong> 63 min to 42 min (50% faster)</li>
+            <li><strong>Dex Grasp:</strong> 31 min to 20 min (55% faster)</li>
+        </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -188,7 +202,7 @@
         <img src="./static/images/curves_ablation.png" alt="Ablation Study" style="width: 65%; height: auto;">
         <div class="content has-text-justified" style="margin-top: 1rem;">
           <p>
-          Removing any of our key components - sim demos, real demos, action proposals - resulted in a performance drop, which indicates all 3 components are helpful.
+          Removing any of our key components - sim demos, real demos, and action proposal - resulted in a performance drop, which indicates all 3 components are effective.
         </div>
       </div>
     </div>
