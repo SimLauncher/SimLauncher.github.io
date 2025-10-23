@@ -206,13 +206,13 @@
         <h2 class="title is-3">Analyses</h2>
         
         <!-- Takeaway 1 -->
-        <!-- <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 1: Scaling simulation pre-training improves sim-to-real policy transfer</h3> -->
+        <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 1: Scaling simulation pre-training improves sim-to-real policy transfer</h3>
         <img src="./static/images/curves_takeaway1.png" alt="Takeaway 1" style="width: 60%; height: auto;">
         <div class="content has-text-justified" style="margin-top: 1rem;">
           <p>
-            <strong>Takeaway 1: Scaling simulation pre-training improves sim-to-real policy transfer. </strong>
+            <!-- <strong>Takeaway 1: Scaling simulation pre-training improves sim-to-real policy transfer. </strong> -->
             <!-- change line break -->
-            <br>
+            <!-- <br> -->
             We train behavior cloning policies with different number of sim demos. 
             Not surprisingly, BC with real demos is better than BC with sim demos when the number of demos is controlled, likely due to the sim-to-real gap. 
             However, as we scale up sim demos, which is very efficient, it outperforms BC with real demos.
@@ -221,13 +221,13 @@
         </div>
 
         <!-- Takeaway 2 -->
-        <!-- <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 2: Simulated demonstrations alone enable effective bootstrapping</h3> -->
+        <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 2: Simulated demonstrations alone enable effective bootstrapping</h3>
         <img src="./static/images/curves_takeaway2.png" alt="Takeaway 2" style="width: 65%; height: auto;">
         <div class="content has-text-justified" style="margin-top: 1rem;">
           <p>
-            <strong>Takeaway 2: Simulated demonstrations alone enable effective bootstrapping. </strong>
+            <!-- <strong>Takeaway 2: Simulated demonstrations alone enable effective bootstrapping. </strong> -->
             <!-- change line break -->
-            <br>
+            <!-- <br> -->
             A key concern when using sim demos for bootstrapping is that the critic might overfit to simulation-specific features, allowing it to distinguish between sim demos and the real-world replay buffer. 
             Despite this potential pitfall, we surprisingly find that in our pick-and-place task, using sim demos alone can launch the RL training. 
             For optimal performance, however, our ablation study suggests combining sim demos with a small number of real demos.
@@ -235,13 +235,13 @@
         </div>
 
         <!-- Takeaway 3 -->
-        <!-- <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 3: Expanding state coverage in sim demos enhances bootstrapping</h3> -->
+        <h3 class="title is-4" style="margin-top: 3rem;">Takeaway 3: Expanding state coverage in sim demos enhances bootstrapping</h3>
         <img src="./static/images/curves_takeaway3.png" alt="Takeaway 3" style="width: 98%; height: auto;">
         <div class="content has-text-justified" style="margin-top: 1rem;">
           <p>
-            <strong>Takeaway 3: Expanding state coverage in sim demos enhances bootstrapping. </strong>
+            <!-- <strong>Takeaway 3: Expanding state coverage in sim demos enhances bootstrapping. </strong> -->
             <!-- change line break -->
-            <br>
+            <!-- <br> -->
             Since we observe that increasing the number of sim demos can improve sample efficiency, we wonder if increasing the state coverage can further improve sample efficiency.
             To investigate this, we construct a hybrid demo buffer by collecting rollouts uniformly throughout the sim policy training process, containing both successful and failed rollouts. This approach provides better state coverage. 
             Using the hybrid demo buffer leads to slightly improved sample efficiency, suggesting that expanding state coverage in sim demos can further enhance bootstrapping.
