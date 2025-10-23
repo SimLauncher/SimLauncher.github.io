@@ -62,7 +62,7 @@
           </div>
 
           <!-- Paper Links -->
-          <div class="column has-text-centered" style="margin-top: 2rem;">
+          <div class="column has-text-centered" style="margin-top: 1rem;">
             <div class="publication-links">
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2507.04452"
@@ -82,7 +82,7 @@
 </section>
 
 <!-- Pipeline Image -->
-<section class="section">
+<section class="section" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
@@ -93,7 +93,7 @@
 </section>
 
 <!-- Abstract -->
-<section class="section">
+<section class="section" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -103,9 +103,9 @@
             Autonomous learning of dexterous, long-horizon
             robotic skills has been a longstanding pursuit of embodied AI.
             Recent advances in robotic reinforcement learning (RL) have
-            demonstrated remarkable performance and robustness in realworld visuomotor control tasks. However, applying RL in the
-            real world faces challenges such as <strong>low sample efficiency, slow
-            exploration, and significant reliance on human intervention</strong>.
+            demonstrated remarkable performance and robustness in realworld visuomotor control tasks. 
+            <!-- However, applying RL in the real world faces challenges such as <strong>low sample efficiency, slow exploration, and significant reliance on human intervention</strong>. -->
+            However, real-world RL faces the challenge of <strong>slow exploration</strong>, and therefore requires lots of human demonstrations or interventions to guide exploration.
             In contrast, simulators offer a <strong>safe and efficient</strong> environment
             for extensive exploration and data collection, while the visual
             sim-to-real gap, often a limiting factor, can be mitigated
@@ -126,8 +126,8 @@
             for better exploration.
           </p>
           <p>
-            We conduct comprehensive experiments
-            across multi-stage, contact-rich, and dexterous hand manipulation tasks. Compared to prior real-world RL approaches, SimLauncher significantly improves sample efficiency and achieves
+            <!-- We conduct comprehensive experiments across multi-stage, contact-rich, and dexterous hand manipulation tasks.  -->
+            Compared to prior real-world RL approaches, SimLauncher significantly improves sample efficiency and achieves
             near-perfect success rates. We hope this work serves as a 
             <strong>proof of concept</strong> and inspires further research on leveraging large-scale simulation pre-training to benefit real-world robotic RL.
           </p>
